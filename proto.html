@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Xenon</title>
+    <script src="http://cdn.azendal.com/library/jquery/jquery.js"></script>
+    <script src="http://cdn.azendal.com/library/neon/neon.js"></script>
+    <script src="http://cdn.azendal.com/library/neon/stdlib/CustomEvent.js"></script>
+    <script src="http://cdn.azendal.com/library/neon/stdlib/CustomEventSupport.js"></script>
+    <script src="http://cdn.azendal.com/library/neon/stdlib/NodeSupport.js"></script>
+    <script src="keymaster.js"></script>
+    <script src="Xenon.js"></script>
+    <script src="Xenon/Command.js"></script>
+    <script src="Xenon/Range.js"></script>
+    <script src="Xenon/Editor.js"></script>
+  </head>
+  <body>
+    <div id="xe_editable_1">
+      <div>
+        edit me!
+      </div>
+      <div>
+        edit me!
+      </div>
+    </div>
+    <script>      
+      editor = new Xenon.Editor({
+          targetElement : $('#xe_editable_1')
+      });
+    </script>
+  </body>
+</html>

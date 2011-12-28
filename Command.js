@@ -34,7 +34,7 @@ Module(Xenon, 'Command')({
     indent : function () {},
     insertBrOnReturn : function () {},
     insertHorizontalRule : function () {},
-    insetHTML : function () {},
+    insertHTML : function () {},
     insertImage : function () {},
     insertOrderedList : function () {},
     insertUnorderedList : function () {},

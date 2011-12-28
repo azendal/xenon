@@ -118,42 +118,6 @@
               mods[mi] = _MODIFIERS[mods[mi]];
             key = [key[key.length-1]];
           }
-          // convert to keycode and...
-          key = key[0]
-          key = _MAP[key] || key.toUpperCase().charCodeAt(0);
-          // ...store handler
-          if (!(key in _handlers)) _handlers[key] = [];
-          _handlers[key].push({ shortcut: keys[i], scope: scope, method: method, key: keys[i], mods: mods });
-        }
-      };
-
-      // initialize key.<modifier> to false
-      for(k in _MODIFIERS) assignKey[k] = false;
-
-      // set current scope (default 'all')
-      function setScope(scope){ _scope = scope || 'all' };
-
-      // cross-browser events
-      function addEvent(object, event, method) {
-        if (object.addEventListener)
-          object.addEventListener(event, method, false);
-        else if(object.attachEvent)
-          object.attachEvent('on'+event, function(){ method(window.event) });
-      };
-
-      // set the handlers globally on document
-      addEvent(document, 'keydown', dispatch);
-      addEvent(document, 'keyup', clearModifier);
-
-      // set window.key and window.key.setScope
-      global.key = assignKey;
-      global.key.setScope = setScope;
-
-      if(typeof module !== 'undefined') module.exports = key;
-
-    })(this);
-    
-</script>
 <script type="text/javascript" charset="utf-8">
     Class(Breeze, 'InlineEditor').inherits(Breeze.Widget)({
         eventTrap : null,
